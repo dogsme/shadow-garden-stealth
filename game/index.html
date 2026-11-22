@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Lantern Garden — a stealth game</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #070b12; min-height: 100%; }
+  body {
+    font-family: "Avenir Next", "Segoe UI", system-ui, sans-serif;
+    color: #dfe8d8; display: flex; flex-direction: column; align-items: center;
+  }
+  h1 { font-size: 22px; margin: 18px 0 4px; letter-spacing: 2px; color: #f4d97b; font-weight: 600; }
+  .sub { font-size: 13px; color: #8fa38a; margin: 0 0 12px; }
+  #wrap { position: relative; box-shadow: 0 0 60px rgba(0,0,0,.8); border: 1px solid #26303a; border-radius: 6px; overflow: hidden; }
+  canvas { display: block; background: #0c1a12; }
+  .help { max-width: 960px; font-size: 13px; line-height: 1.6; color: #a9bda6; padding: 12px 18px 22px; text-align: center; }
+  .help b { color: #f4d97b; font-weight: 600; }
+  kbd { background: #1b2530; border: 1px solid #3a4a58; border-bottom-width: 2px; border-radius: 4px; padding: 1px 6px; font-family: inherit; color: #e8eef2; }
+</style>
+</head>
+<body>
+<h1>THE LANTERN GARDEN</h1>
+<p class="sub">a game of moonlight, hedges &amp; held breath</p>
+<div id="wrap"><canvas id="game" width="960" height="640"></canvas></div>
+<p class="help">
+  <b>Move</b> <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> or <kbd>Arrow keys</kbd> &nbsp;·&nbsp;
+  <b>Sneak</b> hold <kbd>Shift</kbd> (slow, quiet, harder to spot) &nbsp;·&nbsp;
+  <b>Restart</b> <kbd>R</kbd><br>
+  Slip past the guards' lantern cones, hide in the <b>bushes</b>, steal all <b>3 moon-keys</b>,
+  then reach the glowing <b>exit gate</b>. If a guard sees you the detection meter fills —
+  break line of sight and it drains. If it fills completely, the alarm sounds and the night begins again.
+</p>
+<script src="game.js"></script>
+</body>
+</html>
